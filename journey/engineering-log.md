@@ -3,7 +3,7 @@
 Day-by-day record of the build, including mistakes. Newest entries at the bottom.
 Photos are in [photos/](photos/); faults are written up in [problems-and-fixes.md](problems-and-fixes.md).
 
-## 2026-10-24 — Board choice and design
+## Board choice and design
 
 - Chose the **Arduino Uno R3**. The HC-SR04 and SG90 both run on 5 V directly, and radar
   display sketches expect the standard Arduino serial format.
@@ -40,7 +40,7 @@ Photos are in [photos/](photos/); faults are written up in [problems-and-fixes.m
   connections match the wiring plan, junction dots only where wires actually join, no wire
   passes through a part, LCD D0–D3 marked no-connect.
 
-## 2026-10-24 — Power rails, LCD power and contrast
+## Power rails, LCD power and contrast
 
 ![First wiring attempt](photos/2026-10-24_01-first-wiring-attempt.jpg)
 
@@ -68,7 +68,7 @@ Photos are in [photos/](photos/); faults are written up in [problems-and-fixes.m
   ≈ 1.2 V. VDD − V0 ≈ 3.72 V assuming a 5.00 V rail, within about 2 % of the recommended
   3.8 V. Still to do: measure the real 5 V rail so the comparison uses the actual VDD.
 
-## 2026-10-24 — LCD wiring test
+## LCD wiring test
 
 ![LCD HelloWorld test](photos/2026-10-24_05-lcd-helloworld-test.jpg)
 
@@ -77,7 +77,7 @@ Photos are in [photos/](photos/); faults are written up in [problems-and-fixes.m
   wires, 4-bit mode, contrast and power before adding anything else. The block row
   disappeared once `lcd.begin()` ran.
 
-## 2026-10-24 — LEDs and buzzer wired
+## LEDs and buzzer wired
 
 ![LEDs and buzzer wired](photos/2026-10-24_06-leds-and-buzzer-wired.jpg)
 
@@ -86,7 +86,7 @@ Photos are in [photos/](photos/); faults are written up in [problems-and-fixes.m
 - Photo taken with the board unplugged, so nothing is lit yet. Still to do: power up and
   check each LED and the buzzer switches on from its pin.
 
-## 2026-10-24 — Full circuit wired
+## Full circuit wired
 
 ![Full circuit wired](photos/2026-10-24_07-full-circuit-wired.jpg)
 
@@ -97,7 +97,7 @@ Photos are in [photos/](photos/); faults are written up in [problems-and-fixes.m
 - Still to do before the first full run: check the capacitor's stripe (−) is on the − rail,
   then power up and test each part on its own (LEDs, buzzer, sensor readings, servo sweep).
 
-## 2026-10-24 — First full run: everything works
+## First full run: everything works
 
 ![The radar reacting to my hand](../final/media/sweep.gif)
 
@@ -120,7 +120,7 @@ Photos are in [photos/](photos/); faults are written up in [problems-and-fixes.m
   for the whole GIF tinted every frame green whenever the green LED was lit, so each frame
   gets its own palette.
 
-## 2026-10-24 — Finished-build photo and schematic Rev 3
+## Finished-build photo and schematic Rev 3
 
 ![The finished build](../final/hardware/images/final-build.jpg)
 
