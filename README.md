@@ -1,8 +1,3 @@
-<!--
-  TEMPLATE — fill in every <!-- TODO --> once the build is finished, then delete this comment.
-  Rule of thumb from aataiyeb/buck_converter: every claim in this README should be backed by
-  a photo, a measurement, or a file in this repo.
--->
 
 # Arduino ultrasonic radar
 
@@ -20,15 +15,17 @@ and the LCD reading change.*
 
 The repo has two halves:
 
-- **[`final/`](final/)** — the finished product: firmware, KiCad schematic, wiring tables,
+- **[`final`](final/)** — the finished product: firmware, KiCad schematic, wiring tables,
   design calculations and test data.
-- **[`journey/`](journey/)** — how I got there: the engineering log, photos in build order,
+- **[`journey`](journey/)** — how I got there: the engineering log, photos in build order,
   every problem I hit and how I fixed it, and my progress learning C.
 
 <!-- TODO: replace with the real block diagram once you're happy with it -->
+## Block diagram
+
 ![Block diagram](final/docs/block-diagram.svg)
 
-## The circuit
+## Full circuit
 
 ![Schematic](final/hardware/images/schematic.svg)
 
@@ -46,11 +43,11 @@ wiring plan. You can open it without KiCad as
 
 | | |
 |---|---|
-| Distance accuracy | <!-- TODO e.g. "within ±1 cm from 10–100 cm (tape measure vs sensor, 5 readings each)" --> |
-| Usable range | <!-- TODO e.g. "reliable from 3 cm to ~200 cm; beyond that returns 'clear'" --> |
-| Sweep time | <!-- TODO measured time for 15°→165° (calculated ≈ 4.5–6.3 s, see design calcs) --> |
-| Angular resolution | 1° steps (beam is ~15° wide, so objects appear as arcs, not points) |
-| Warning zones | red < 20 cm, yellow 20–50 cm, green otherwise |
+| Distance accuracy | 92.23% (calculated from 5 readings using a ruler) |
+| Usable range | 2 cm to ~60 cm (beyond that, reading states 'clear') |
+| Sweep time | 3.93 s (calculated average from 3 readings using a stopwatch) |
+| Angular resolution | 1° steps |
+| Warning zones | red < 20 cm, yellow 20–50 cm, green 50+ cm |
 | LCD contrast voltage | V0 = 1.278 V measured vs ≈ 1.2 V from the datasheet (about 2 % off the recommended VDD − V0) |
 
 ![The finished build](final/hardware/images/final-build.jpg)
@@ -64,13 +61,7 @@ and buzzer on the breadboard, and the HC-SR04 taped to the SG90 servo.*
    each angle so it settles. The end stops are avoided because the SG90 strains and jitters there.
 2. At each angle the Uno sends a 10 µs pulse on the HC-SR04's Trig pin. The sensor fires a
    40 kHz burst and holds its Echo pin high until the echo returns.
-3. `pulseIn()` measures how long Echo stays high. That is the sound's round trip, so the
-   distance is
-
-   $$d = \frac{t \times 0.0343}{2}$$
-
-   where $t$ is in microseconds and 0.0343 cm/µs is the speed of sound. A 12 ms timeout caps
-   the range at about 2 m; no echo means "clear".
+3. `pulseIn()` measures how long Echo stays high. That is the sound's round trip.
 4. The distance picks the warning zone. The LEDs follow it directly, and the buzzer beeps
    using `millis()` (75 ms on every 500 ms for yellow, every 150 ms for red), so the beeping
    never pauses the sweep the way `delay()` would.
@@ -79,18 +70,16 @@ and buzzer on the breadboard, and the HC-SR04 taped to the SG90 servo.*
 
 ## How I built it
 
-<!-- TODO: fill in dates and what actually happened at each stage -->
 
 | Stage | What I did | Where |
 |---|---|---|
-| Design | Pin planning (13 signal pins on 18 available), resistor values, timing and range calculations, KiCad schematic | [design calculations](final/docs/design-calculations.md), [schematic](final/hardware/kicad/) |
+| Design | Pin planning, resistor values, timing and range calculations, KiCad schematics | [design calculations](final/docs/design-calculations.md), [schematic](final/hardware/kicad/) |
 | LCD (done) | Power rails, contrast pot set and measured, HelloWorld wiring test | [journey](journey/README.md) |
 | 1. Sensor | HC-SR04 alone, readings checked on Serial Monitor against a tape measure | [hardware](final/hardware/README.md) |
 | 2. Servo | Added the sweep; checked for jitter and resets on USB power | [hardware](final/hardware/README.md) |
 | 3. Warnings | LEDs and buzzer, non-blocking beep timing | [firmware](final/firmware/README.md) |
-| 4. Display | <!-- TODO: laptop radar screen, if built --> | [firmware](final/firmware/README.md) |
 
-The full story with photos is in [journey/](journey/README.md), and the day-by-day record is
+The full story with photos is in [journey](journey/README.md), and the day-by-day record is
 in the [engineering log](journey/engineering-log.md).
 
 ## Learning C alongside the build
@@ -145,22 +134,6 @@ Measuring equipment: Crenova MS8233D digital multimeter. <!-- TODO: add tape mea
 - Power the servo from a separate supply.
 - Port the firmware to plain C on the bare ATmega328P (no Arduino libraries).
 
-## Repository layout
-
-```
-final/                 the finished product
-  firmware/            Arduino sketch(es) and notes on each version
-  hardware/            wiring tables, KiCad project, schematic (SVG/PNG/PDF), final-build photo
-  docs/                design calculations, block diagram
-    datasheets/        links + key specs for the sensor, servo, LCD and buzzer
-  test-data/           measurements, serial logs and the capture script
-  media/               demo GIF (sweep.gif) of the radar running
-journey/               how it was built
-  engineering-log.md   day-by-day record
-  problems-and-fixes.md
-  learning-c.md
-  photos/              build photos in order (date_number-what.jpg)
-```
 
 ## Reproducing it
 
@@ -174,6 +147,6 @@ journey/               how it was built
 
 ## About this project
 
-The design guidance and first version of the code were developed with help from Claude
-(Anthropic). I built, wired, tested and debugged everything myself, and the results here are
-my own measurements. <!-- TODO: adjust to reflect what you actually did yourself -->
+The design guidance and first version of the code were developed by me but with the help from Claude
+(Anthropic), the code had been enhanced therefore providing greater efficiency to the functionality of the circuit. I built, wired, tested and debugged everything myself, and the results here are
+my own measurements.
