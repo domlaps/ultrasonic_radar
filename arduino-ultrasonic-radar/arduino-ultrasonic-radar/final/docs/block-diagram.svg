@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <style>
+    .box { fill: #ffffff; stroke: #24292f; stroke-width: 1.5; rx: 6; }
+    .mcu { fill: #eaf2ff; stroke: #0969da; stroke-width: 2; }
+    .lbl { fill: #24292f; text-anchor: middle; }
+    .sub { fill: #57606a; text-anchor: middle; font-size: 11px; }
+    .wire { stroke: #24292f; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+    .pin { fill: #57606a; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#24292f"/>
+    </marker>
+  </defs>
+  <rect width="760" height="340" fill="#ffffff"/>
+
+  <!-- Uno -->
+  <rect class="box mcu" x="300" y="110" width="160" height="120" rx="6"/>
+  <text class="lbl" x="380" y="160" font-weight="bold">Arduino Uno R3</text>
+  <text class="sub" x="380" y="180">ATmega328P · 5 V</text>
+  <text class="sub" x="380" y="196">USB power + serial</text>
+
+  <!-- Sensor -->
+  <rect class="box" x="30" y="40" width="170" height="60" rx="6"/>
+  <text class="lbl" x="115" y="66">HC-SR04</text>
+  <text class="sub" x="115" y="84">ultrasonic sensor</text>
+  <path class="wire" d="M200,62 L300,130"/>
+  <text class="pin" x="232" y="66">Trig D10</text>
+  <path class="wire" d="M300,150 L200,85"/>
+  <text class="pin" x="232" y="128">Echo D11</text>
+
+  <!-- Servo -->
+  <rect class="box" x="30" y="240" width="170" height="60" rx="6"/>
+  <text class="lbl" x="115" y="266">SG90 servo</text>
+  <text class="sub" x="115" y="284">sweeps 15°–165°</text>
+  <path class="wire" d="M300,210 L200,262"/>
+  <text class="pin" x="230" y="226">D12</text>
+
+  <!-- mechanical link -->
+  <path d="M115,100 L115,240" stroke="#57606a" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text class="pin" x="122" y="174">mounted on</text>
+
+  <!-- LCD -->
+  <rect class="box" x="560" y="20" width="170" height="60" rx="6"/>
+  <text class="lbl" x="645" y="46">LCD1602</text>
+  <text class="sub" x="645" y="64">angle + distance</text>
+  <path class="wire" d="M460,125 L560,55"/>
+  <text class="pin" x="468" y="106">D2–D5, D7, D8</text>
+
+  <!-- LEDs -->
+  <rect class="box" x="560" y="110" width="170" height="60" rx="6"/>
+  <text class="lbl" x="645" y="136">LEDs</text>
+  <text class="sub" x="645" y="154">green · yellow · red</text>
+  <path class="wire" d="M460,155 L560,140"/>
+  <text class="pin" x="482" y="140">A0–A2</text>
+
+  <!-- Buzzer -->
+  <rect class="box" x="560" y="200" width="170" height="60" rx="6"/>
+  <text class="lbl" x="645" y="226">Active buzzer</text>
+  <text class="sub" x="645" y="244">proximity beeps</text>
+  <path class="wire" d="M460,195 L560,228"/>
+  <text class="pin" x="496" y="226">D6</text>
+
+  <!-- Laptop -->
+  <rect class="box" x="280" y="280" width="200" height="44" rx="6"/>
+  <text class="lbl" x="380" y="300">Laptop</text>
+  <text class="sub" x="380" y="315">"angle,distance." · 9600 baud</text>
+  <path class="wire" d="M380,230 L380,280"/>
+</svg>
