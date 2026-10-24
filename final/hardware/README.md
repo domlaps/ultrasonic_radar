@@ -91,36 +91,3 @@ Long leg (anode) to the Uno pin, short leg → 220 Ω → − rail.
 
 ![The finished build](images/final-build.jpg)
 
-## Build stages
-
-Each stage was tested before moving on. The photos taken along the way are in
-[journey/photos](../../journey/photos/); the full story is in the
-[engineering log](../../journey/engineering-log.md).
-
-<!-- TODO: fill in for each stage — date, photo, what you tested, what you saw -->
-
-### Stage 1 — Sensor only
-<!-- ![Stage 1](../../journey/photos/YYYY-MM-DD_NN-sensor.jpg) -->
-- Test: 
-- Result: 
-
-### Stage 2 — Servo sweep
-<!-- ![Stage 2](../../journey/photos/YYYY-MM-DD_NN-servo.jpg) -->
-- Test: 
-- Result: 
-
-### Stage 3 — LCD (done 2026-10-24)
-![LCD HelloWorld test](../../journey/photos/2026-10-24_05-lcd-helloworld-test.jpg)
-- Test: set contrast with the 10 kΩ pot and measured V0; then uploaded the IDE's
-  LiquidCrystal → HelloWorld example.
-- Result: V0 = 1.278 V (datasheet ≈ 1.2 V). "hello, world!" and a seconds counter displayed,
-  so RS, E, D4–D7, contrast and power are all correct.
-
-### Stage 4 — LEDs and buzzer (wired 2026-10-24)
-![LEDs and buzzer wired](../../journey/photos/2026-10-24_06-leds-and-buzzer-wired.jpg)
-- Test: <!-- TODO: power up and switch each LED (A0–A2) and the buzzer (D6) on in turn -->
-- Result: 
-
-### Full system (2026-10-24)
-![Full circuit wired](../../journey/photos/2026-10-24_07-full-circuit-wired.jpg)
-- Result: worked on the first full run — see the demo GIF in the main README.
