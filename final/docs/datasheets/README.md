@@ -2,12 +2,12 @@
 
 The datasheets for every main part, with the specifications this design relies on.
 
-| Part | PDF | Original source |
-|---|---|---|
-| HC-SR04 ultrasonic sensor | [HC-SR04_ultrasonic_sensor.pdf](HC-SR04_ultrasonic_sensor.pdf) | [ElecFreaks](https://mischianti.org/wp-content/uploads/2025/11/Datasheet-HCSR04-classic.pdf) |
-| SG90 micro servo | [SG90_micro_servo.pdf](SG90_micro_servo.pdf) | [TowerPro, Wiltronics copy](https://www.wiltronics.com.au/wp-content/uploads/datasheets/HA9740%20Data%20Sheet.pdf) |
-| LCD1602 display | [LCD1602_display.pdf](LCD1602_display.pdf) | [SunFounder, via DigiKey](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5773/CN0295D%20other%20related%20document.pdf) |
-| Active buzzer | [active_buzzer_TMB12A05.pdf](active_buzzer_TMB12A05.pdf) | [Electrokit copy](https://www.electrokit.com/upload/quick/0a/0c/a15b_41037353-tds.pdf) |
+| Part | Original source |
+|---|---|
+| HC-SR04 ultrasonic sensor | [ElecFreaks](https://mischianti.org/wp-content/uploads/2025/11/Datasheet-HCSR04-classic.pdf) |
+| SG90 micro servo | [TowerPro, Wiltronics copy](https://www.wiltronics.com.au/wp-content/uploads/datasheets/HA9740%20Data%20Sheet.pdf) |
+| LCD1602 display  | [SunFounder, via DigiKey](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5773/CN0295D%20other%20related%20document.pdf) |
+| Active buzzer  | [Electrokit copy](https://www.electrokit.com/upload/quick/0a/0c/a15b_41037353-tds.pdf) |
 
 ## HC-SR04 ultrasonic sensor
 
