@@ -82,13 +82,6 @@ and buzzer on the breadboard, and the HC-SR04 taped to the SG90 servo.*
 The full story with photos is in [journey](journey/README.md), and the day-by-day record is
 in the [engineering log](journey/engineering-log.md).
 
-## Learning C alongside the build
-
-<!-- TODO: summarise your progression. Keep it honest and specific. -->
-The first version of the sketch was written with help, and I learned it line by line. I then
-learned C and rewrote parts of it myself — progress is in
-[journey/learning-c.md](journey/learning-c.md) and the before/after code is in
-[final/firmware/README.md](final/firmware/README.md). <!-- TODO: confirm/adjust once done -->
 
 ## Parts
 
