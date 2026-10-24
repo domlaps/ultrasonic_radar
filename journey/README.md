@@ -8,7 +8,7 @@ The finished design (firmware, schematic, calculations) is in [`final/`](../fina
 | [engineering-log.md](engineering-log.md) | Day-by-day record: decisions, measurements, what went wrong |
 | [problems-and-fixes.md](problems-and-fixes.md) | Every fault I hit: what I saw → cause → how I found it → fix |
 | [learning-c.md](learning-c.md) | Learning to write the firmware myself, then in C |
-| [photos](photos/) | Photos in build order, named `date_number-what-it-shows.jpg` |
+| [photos](photos/) | Photos in build order |
 
 ## Timeline in photos
 
