@@ -1,7 +1,5 @@
 # Hardware
 
-Wiring for the Arduino Uno R3 version. Breadboard + rail = Uno 5V, − rail = Uno GND.
-
 ## Schematic
 
 ![Schematic](images/schematic.svg)
