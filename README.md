@@ -138,8 +138,3 @@ Measuring equipment: Crenova MS8233D digital multimeter. <!-- TODO: add tape mea
    `python3 final/test-data/capture.py <serial port>` to log a sweep and plot it.
    It needs pyserial and matplotlib.
 
-## About this project
-
-The design guidance and first version of the code were developed by me but with the help from Claude
-(Anthropic), the code had been enhanced therefore providing greater efficiency to the functionality of the circuit. I built, wired, tested and debugged everything myself, and the results here are
-my own measurements.
