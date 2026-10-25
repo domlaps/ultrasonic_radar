@@ -2,7 +2,7 @@
 
 Each one: what I saw → what caused it → how I found it → how I fixed it.
 
-## 1. Dead + rail on the breadboard — 2026-10-24
+## 1. Dead + rail on the breadboard
 
 - **What I saw:** one of the positive power rails stopped working in the early wiring stage.
 - **Cause:** I forced a resistor lead into the rail, which damaged the rail's internal metal
@@ -14,7 +14,7 @@ Each one: what I saw → what caused it → how I found it → how I fixed it.
 - **Lesson:** never force a lead in. If it won't go, check the lead is straight and the hole
   is clear.
 
-## 2. No way to mount the sensor on the servo — 2026-10-24
+## 2. No way to mount the sensor on the servo
 
 - **What I saw:** with the full circuit working, I had nothing to fix the HC-SR04 to the servo
   horn: no bracket, glue or foam tape.
@@ -23,7 +23,7 @@ Each one: what I saw → what caused it → how I found it → how I fixed it.
 - **Lesson:** plan the mount at the same time as the wiring. Next time: a proper HC-SR04 + SG90
   bracket, or a 3D-printed one.
 
-## 3. Servo jitter during the sweep — 2026-10-24
+## 3. Servo jitter during the sweep
 
 - **What I saw:** the servo's movement was jittery instead of a smooth sweep.
 - **Likely cause:** with 1° steps the servo starts and stops at every degree, so the motion
@@ -32,7 +32,7 @@ Each one: what I saw → what caused it → how I found it → how I fixed it.
 - **Fix:** increased the speed of rotation, which gave a smooth, continuous movement.
   <!-- TODO: the exact change (step size / delay) and the values before and after -->
 
-## 4. Occasional warning misfires and wrong distances — 2026-10-24 (still open)
+## 4. Occasional warning misfires and wrong distances (still open)
 
 - **What I saw:** rarely, the LEDs/buzzer jumped to the wrong zone for a moment, and now and
   then a distance reading was clearly wrong.
@@ -49,7 +49,7 @@ Each one: what I saw → what caused it → how I found it → how I fixed it.
   row agree.
   <!-- TODO: once tried, record what you changed and whether the misfires stopped -->
 
-## 5. Schematic labels overlapping — 2026-10-24
+## 5. Schematic labels overlapping
 
 - **What I saw:** when I exported the KiCad schematic to check it, some labels were
   unreadable: the servo's pin names were drawn on top of each other, the sensor's "GND" and
